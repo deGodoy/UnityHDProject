@@ -17,11 +17,15 @@ namespace Unity.LEGO.Behaviours.Triggers
             Fire2,
             Fire3,
             OtherKey,
-            AnyKey
+            AnyKey,
+            Word
         }
 
         [SerializeField, Tooltip("The input to detect.")]
         Type m_Type = Type.OtherKey;
+
+        [SerializeField, Tooltip("The input to detect.")]
+        Type w_Type = Type.Word;
 
         enum Key
         {
@@ -51,10 +55,19 @@ namespace Unity.LEGO.Behaviours.Triggers
             X = KeyCode.X,
             Y = KeyCode.Y,
             Z = KeyCode.Z,
+            word = 123,
+        }
+
+        enum word
+        {
+            word,
         }
 
         [SerializeField, Tooltip("The key to detect.")]
         Key m_OtherKey = Key.E;
+
+        [SerializeField, Tooltip("The key to detect.")]
+        word w_OtherKey = (word) Key.word;
 
         public enum Trigger
         {
